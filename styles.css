@@ -1,0 +1,11 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  border: 2px solid black;
+  background-color: lightblue;
+}
+
+.footer nav ul {
+  list-style: none;
+  padding: 0;
+}
