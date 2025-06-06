@@ -4,12 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App-Bookmark</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <h1>Quiz App</h1>
+    </header>
     <main>
-      <h2>Bookmark</h2>
+      <section>
+        <button aria-label="bookmark" class="safe">
+          <img src="assets/bookmark-check.svg" class="icon-default" />
+        </button>
+        <div>
+          <h2 class="question">
+            Which magical creature guards the entrance to the Gryffindor common
+            room?
+          </h2>
+          <h4 class="answer" hidden>The Fat Lady (portrait)</h4>
+          <button class="show-hide">Show Answer/Hide Answer</button>
+        </div>
+        <ul>
+          <li><button class="tag">html</button></li>
+          <li><button class="tag">css</button></li>
+          <li><button class="tag">flexbox</button></li>
+        </ul>
+      </section>
+      <section>
+        <button aria-label="bookmark" class="safe">
+          <img src="assets/bookmark-check.svg" class="icon-default" />
+        </button>
+        <div>
+          <h2 class="question">
+            What is the name of the game played on flying broomsticks in the
+            wizarding world?
+          </h2>
+          <h4 class="answer" hidden>Quidditch</h4>
+          <button class="show-hide">Show Answer/Hide Answer</button>
+        </div>
+        <ul>
+          <li><button class="tag">html</button></li>
+          <li><button class="tag">css</button></li>
+          <li><button class="tag">flexbox</button></li>
+        </ul>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <nav>
+        <ul>
+          <li>
+            <a class="nav-link active" href="index.html">
+              <img src="./assets/house.svg" />
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="./bookmark.html">
+              <img src="assets/bookmark-check.svg" class="icon-default" />
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="./profile.html">
+              <img src="assets/circle-user-round.svg" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>
