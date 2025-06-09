@@ -1,15 +1,74 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz-App-Profile</title>
+    <title>Quiz-App-Bookmark</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <h1>The Big Harry Potter Quiz</h1>
+    </header>
     <main>
-      <h2>profile</h2>
+      <section class="profile">
+        <img src="./assets/circle-user-round.svg" />
+        <h2>Max Doe</h2>
+      </section>
+
+      <section class="about">
+        <h3>About me</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex
+          voluptates animi magni blanditiis corrupti nihil vero exercitationem
+          porro facilis, vitae officiis quae veniam laudantium numquam neque at
+          ut, totam aperiam.
+        </p>
+      </section>
+
+      <section class="counter">
+        <div>
+          <img />
+          <p></p>
+        </div>
+
+        <div>
+          <img />
+          <p></p>
+        </div>
+      </section>
+
+      <section class="settings">
+        <h3>Settings</h3>
+        <div>
+          <h4>Dark Mode</h4>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <nav>
+        <ul>
+          <li>
+            <a class="nav-link" href="index.html">
+              <img src="./assets/house.svg" />
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="./bookmark.html">
+              <img src="assets/bookmark.svg" />
+            </a>
+          </li>
+          <li>
+            <a class="nav-link active" href="./profile.html">
+              <img src="assets/circle-user-round.svg" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

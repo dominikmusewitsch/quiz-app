@@ -8,12 +8,33 @@
   </head>
   <body>
     <header>
-      <h1>Quiz App</h1>
+      <h1>The Big Harry Potter Quiz</h1>
     </header>
     <main>
       <section>
         <button aria-label="bookmark" class="safe">
-          <img src="assets/bookmark-check.svg" class="icon-default" />
+          <img src="assets/bookmark.svg" />
+        </button>
+        <div>
+          <h2 class="question">
+            What is the name of the lightning bolt-shaped scar on Harry Potter's
+            forehead?
+          </h2>
+          <h4 class="answer" hidden>The Dark Mark</h4>
+          <button class="toggle-answer">Show Answer</button>
+        </div>
+        <ul>
+          <li><button aria-label="go to sci-fi" class="tag">sci-fi</button></li>
+          <li>
+            <button aria-label="go to fantasy" class="tag">fantasy</button>
+          </li>
+          <li><button aria-label="go to books" class="tag">books</button></li>
+        </ul>
+      </section>
+
+      <section>
+        <button aria-label="bookmark" class="safe">
+          <img src="assets/bookmark.svg" />
         </button>
         <div>
           <h2 class="question">
@@ -21,7 +42,7 @@
             room?
           </h2>
           <h4 class="answer" hidden>The Fat Lady (portrait)</h4>
-          <button class="show-hide">Show Answer/Hide Answer</button>
+          <button class="toggle-answer">Show Answer</button>
         </div>
         <ul>
           <li><button class="tag">html</button></li>
@@ -29,9 +50,10 @@
           <li><button class="tag">flexbox</button></li>
         </ul>
       </section>
+
       <section>
         <button aria-label="bookmark" class="safe">
-          <img src="assets/bookmark-check.svg" class="icon-default" />
+          <img src="assets/bookmark.svg" />
         </button>
         <div>
           <h2 class="question">
@@ -39,7 +61,7 @@
             wizarding world?
           </h2>
           <h4 class="answer" hidden>Quidditch</h4>
-          <button class="show-hide">Show Answer/Hide Answer</button>
+          <button class="toggle-answer">Show Answer</button>
         </div>
         <ul>
           <li><button class="tag">html</button></li>
@@ -48,17 +70,18 @@
         </ul>
       </section>
     </main>
-    <footer class="footer">
+
+    <footer>
       <nav>
         <ul>
           <li>
-            <a class="nav-link active" href="index.html">
+            <a class="nav-link" href="index.html">
               <img src="./assets/house.svg" />
             </a>
           </li>
           <li>
-            <a class="nav-link" href="./bookmark.html">
-              <img src="assets/bookmark-check.svg" class="icon-default" />
+            <a class="nav-link active" href="./bookmark.html">
+              <img src="assets/bookmark.svg" />
             </a>
           </li>
           <li>
