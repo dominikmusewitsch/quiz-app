@@ -2,21 +2,20 @@ section {
   background-color: #f0c85d;
   max-width: 90%;
   margin: 30px auto;
+  /* auto zentriert in diesem Fall */
   position: relative;
-  box-shadow: 0px 10px 10px #000000;
-  margin-bottom: 5vh;
+  box-shadow: 0px 5px 20px #000000;
 }
 
 .safe {
   position: absolute;
-  top: -20px;
+  top: -15px;
   right: 30px;
   background: none;
   border: none;
 }
 
 .safe img {
-  display: block;
   width: 5vh;
 }
 
@@ -26,20 +25,17 @@ section div {
   align-items: center;
   margin: 2vh;
   gap: 1vh;
+  text-align: center;
 }
-
-/* schriften padding und margin mit relativen werten bestücken */
 
 .question {
   margin-top: 3vh;
-  text-align: center;
 }
 
 .answer {
   background-color: #539a6b;
   padding: 1vh;
   margin: 1vh;
-  text-align: center;
   border-style: dotted;
   border-color: #2d533a;
 }
