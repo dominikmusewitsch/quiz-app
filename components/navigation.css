@@ -1,6 +1,5 @@
 footer {
   position: fixed;
-  /* position ist hier fixed, weil nav im profil sonst nicht unten bleibt */
   bottom: 0;
   left: 0;
   right: 0;
