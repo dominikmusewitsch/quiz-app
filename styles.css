@@ -16,4 +16,5 @@ body {
 main {
   margin-top: 20vh;
   margin-bottom: 14vh;
+  padding-inline: 10%;
 }
