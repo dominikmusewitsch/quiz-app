@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz-App-Bookmark</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./form.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>The Big Harry Potter Quiz</h1>
+    </header>
+    <main>
+      <form class="form" data-js="form">
+        <label for="your-question" class="form__label">Your question:</label>
+        <textarea
+          id="your-question"
+          name="question"
+          rows="5"
+          maxlength="150"
+          class="form__input"
+          data-js="question"
+          placeholder="Type here ..."
+          required
+        ></textarea>
+        <p class="counter" data-js="counter-question">150 characters left</p>
+
+        <label for="your-answer" class="form__label">Your answer:</label>
+        <textarea
+          id="your-answer"
+          name="answer"
+          rows="5"
+          maxlength="150"
+          class="form__input"
+          data-js="answer"
+          placeholder="Type here ..."
+          required
+        ></textarea>
+        <p class="counter" data-js="counter-answer">150 characters left</p>
+
+        <label for="tag" class="form__label">Tag:</label>
+        <input type="text" class="form__input-tag" name="tag" />
+
+        <button aria-label="submit-button" class="form__submit-button">
+          Submit
+        </button>
+      </form>
+
+      <section data-js="card-container"></section>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li>
+            <a class="nav-link" href="index.html">
+              <img src="./assets/home (1).png" />
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="./bookmark.html">
+              <img src="assets/save-instagram.png" />
+            </a>
+          </li>
+          <li>
+            <a class="nav-link active" href="./form.html">
+              <img src="assets/plus_black.png" />
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="./profile.html">
+              <img src="assets/user (1).png" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

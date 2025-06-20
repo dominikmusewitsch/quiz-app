@@ -14,17 +14,30 @@
 
     <main>
       <section class="cards">
-        <button aria-label="bookmark" class="safe">
-          <img class="img" src="./assets/save-instagram.png" />
+        <button aria-label="bookmark" class="safe" data-js="safe">
+          <img
+            class="img"
+            src="./assets/save-instagram.png"
+            data-js="safe-inactive"
+          />
+          <img
+            class="img hidden"
+            src="./assets/bookmark.png"
+            data-js="safe-active"
+          />
         </button>
         <div class="card-content">
           <h2 class="question">
             What is the name of the school that Harry Potter attends?
           </h2>
-          <p class="answer" hidden>
+          <p class="answer hidden" data-js="answer">
             Hogwarts School of Witchcraft and Wizardry
           </p>
-          <button aria-label="show answer" class="toggle-answer">
+          <button
+            aria-label="show answer"
+            class="toggle-answer"
+            data-js="show-answer"
+          >
             Show Answer
           </button>
         </div>
@@ -140,6 +153,11 @@
           <li>
             <a class="nav-link" href="./bookmark.html">
               <img src="./assets/save-instagram.png" />
+            </a>
+          </li>
+          <li>
+            <a class="nav-link active" href="./form.html">
+              <img src="assets/plus_white.png" />
             </a>
           </li>
           <li>
