@@ -1,6 +1,6 @@
 console.clear();
 
-const maxCharacters = 150;
+const MAX_CHARACTERS = 150;
 
 const form = document.querySelector('[data-js="form"]');
 const cardContainer = document.querySelector('[data-js="card-container"]');
@@ -13,19 +13,34 @@ const answerCounter = document.querySelector('[data-js="counter-answer"]');
 
 // ---v---ab hier kommt der Zähler---v---
 
-questionCounter.textContent = `${maxCharacters} characters left`;
-answerCounter.textContent = `${maxCharacters} characters left`;
+// input event weil die zahl sich beim eintippten der wörter schon verändern soll:
+// questionField.addEventListener("input", () => {
+//   const remaining = maxCharacters - questionField.value.length;
+//   questionCounter.textContent = `${remaining} characters left`;
+// });
 
-questionField.addEventListener("input", () => {
-  const remaining = maxCharacters - questionField.value.length;
-  questionCounter.textContent = `${remaining} characters left`;
-});
+// // dann muss man die verbleibenden zeichen errechnen => maximale zeichen - eingegebene zeichen
+// // eingabefeld soll dann die verbleibenden zeichen anzeigen
 
-answerField.addEventListener("input", () => {
-  const remaining = maxCharacters - answerField.value.length;
-  answerCounter.textContent = `${remaining} characters left`;
-});
+// answerField.addEventListener("input", () => {
+//   const remaining = maxCharacters - answerField.value.length;
+//   answerCounter.textContent = `${remaining} characters left`;
+// });
 
+// zusammengefasste version:
+function counterForBothFields(elementField, elementCounter) {
+  elementCounter.textContent = `${MAX_CHARACTERS} characters left`;
+
+  elementField.addEventListener("input", () => {
+    const remaining = MAX_CHARACTERS - elementField.value.length;
+    elementCounter.textContent = `${remaining} characters left`;
+  });
+}
+
+counterForBothFields(questionField, questionCounter);
+counterForBothFields(answerField, answerCounter);
+
+// submit button für das formular:
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -33,12 +48,14 @@ form.addEventListener("submit", (event) => {
 
   const formElements = event.target.elements;
 
+  // unten stehende variablen speichern den eingegebenen text als string
   const question = formElements.question.value;
   const answer = formElements.answer.value;
   const tag = formElements.tag.value;
 
   //   console.log(question, answer, tag);
 
+  // neue elemente kreieren die dann später in der html auftauchen: (vom gröten zum kleinsten)
   const card = document.createElement("section");
   card.classList.add("cards");
 
@@ -54,12 +71,16 @@ form.addEventListener("submit", (event) => {
   imgInactive.classList.add("img");
   imgInactive.setAttribute("src", "./assets/save-instagram.png");
 
+  // setAtribute fügt einen neuen attribut inkl. wert hinzu
+
   const imgActive = document.createElement("img");
   imgActive.classList.add("img", "hidden");
   imgActive.setAttribute("src", "./assets/bookmark.png");
 
-  bookmarkButton.appendChild(imgInactive);
-  bookmarkButton.appendChild(imgActive);
+  bookmarkButton.append(imgInactive);
+  bookmarkButton.append(imgActive);
+
+  // append damit die kreierten elemente angedockt und dargstellt werden
 
   bookmarkButton.addEventListener("click", () => {
     imgInactive.classList.toggle("hidden");
@@ -107,6 +128,8 @@ form.addEventListener("submit", (event) => {
   cardContainer.append(card);
 
   form.reset();
-  questionCounter.textContent = `${maxCharacters} characters left`;
-  answerCounter.textContent = `${maxCharacters} characters left`;
+  questionCounter.textContent = `${MAX_CHARACTERS} characters left`;
+  answerCounter.textContent = `${MAX_CHARACTERS} characters left`;
+
+  // beim laden soll das formular sich resetten und und die maximalen zeichen wieder zurückspringen auf deren maximum
 });

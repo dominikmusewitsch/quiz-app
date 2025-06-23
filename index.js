@@ -12,6 +12,7 @@ safeCard.addEventListener("click", () => {
   imageActive.classList.toggle("hidden");
 });
 
+// lösung soll angezeigt/versteckt werden:
 showAnswer.addEventListener("click", () => {
   const answerText = document.querySelector('[data-js="answer"]');
 
@@ -21,7 +22,7 @@ showAnswer.addEventListener("click", () => {
 
   // ich habe zuerst showAnswer variable geloggt um zu gucken warum es nicht funktioniert mit innerHTML oder textContent.
   // innerHTML hat den umbruch komisch gespeichert und bei innerText war er richtig dargstellt
-  if (showAnswer.innerText === "Show Answer") {
+  if (showAnswer.innerText.trim() === "Show Answer") {
     showAnswer.textContent = "Hide Answer";
   } else {
     showAnswer.textContent = "Show Answer";
